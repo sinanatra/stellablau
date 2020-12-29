@@ -1,0 +1,19 @@
+$font-family-mono: "Courier", sans-serif;
+$font-family-serif: "Times", serif;
+$font-family-sans: "Helvetica", sans-serif;
+
+$font-size-base: 1rem !default;
+$line-height-base: 1.5em !default;
+
+$color-highlight: blue;
+
+html {
+    --background-highlight: red;
+}
+
+$gutter: 16px;
+$phablet: 568px;
+$tablet: 768px;
+$desktop: 960px;
+$widescreen: 1366px;
+$fullhd: 1600px;

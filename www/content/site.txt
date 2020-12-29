@@ -1,0 +1,31 @@
+Title: StellaBlau
+
+----
+
+Tags:
+
+- 
+  tags: Apokalypse
+  color: '#687290'
+- 
+  tags: Sackgasse
+  color: olive
+- 
+  tags: Leere
+  color: pink
+- 
+  tags: Geraune oder die Propheten Seher
+  color: orangered
+- 
+  tags: oh happy times
+  color: azure
+- 
+  tags: 'God save the internet '
+  color: yellow
+- 
+  tags: ???
+  color: red
+
+----
+
+Archivecfields: 

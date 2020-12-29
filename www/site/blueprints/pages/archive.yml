@@ -1,0 +1,21 @@
+title: Archive
+
+options:
+  delete: false
+  preview: false
+  changeStatus: false
+  changeTitle: false
+  changeSlug: false
+  duplicate: false
+
+columns:
+  - width: 1/1
+    sections:
+      archiveA:
+        type: pagesdisplay
+        headline: Archive
+        query: page.children.listed
+      archiveB:
+        type: pagesdisplay
+        headline: Themes
+        query: page.children.unlisted

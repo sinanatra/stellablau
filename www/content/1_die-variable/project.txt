@@ -1,0 +1,100 @@
+Title: Die Variable
+
+----
+
+Projectname: Die Variable
+
+----
+
+Tags: Apokalypse
+
+----
+
+Text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum perspiciatis non voluptatibus consequuntur corporis necessitatibus molestias rem dicta dolor, hic ipsam earum repellat ratione facere obcaecati eveniet sapiente numquam in?
+
+----
+
+Vimeolink: https://player.vimeo.com/video/454643232?controls=0&muted=0
+
+----
+
+Mainimage: 
+
+----
+
+Mainaudio: 
+
+----
+
+Video:
+
+input: https://vimeo.com/454643232/fa055748d6
+media:
+  title: PEPP¥_1920x1080
+  description: >
+    This is "PEPP¥_1920x1080" by
+    GEO—DESIGN Exhibition on Vimeo, the
+    home for high quality videos and the
+    people who love them.
+  url: https://vimeo.com/454643232/fa055748d6
+  type: video
+  tags: [ ]
+  image: >
+    https://i.vimeocdn.com/video/951767142_295x166.jpg
+  imageWidth: 295
+  imageHeight: 166
+  images:
+    - 
+      url: >
+        https://i.vimeocdn.com/video/951767142_295x166.jpg
+      width: 295
+      height: 166
+      size: 48970
+      mime: image/jpeg
+    - 
+      url: 'https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F951767142_1280x720.jpg&src1=https%3A%2F%2Ff.vimeocdn.com%2Fimages_v6%2Fshare%2Fplay_icon_overlay.png'
+      width: 1280
+      height: 720
+      size: 921600
+      mime: image/jpeg
+  code: '<iframe src="https://player.vimeo.com/video/454643232?app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="PEPP&amp;yen;_1920x1080"></iframe>'
+  feeds: [ ]
+  width: 426
+  height: 240
+  aspectRatio: 56.338
+  authorName: GEO—DESIGN Exhibition
+  authorUrl: https://vimeo.com/user121500193
+  providerIcon: >
+    https://i.vimeocdn.com/favicon/main-touch_180
+  providerIcons:
+    - 
+      url: https://vimeo.com/favicon.ico
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+    - 
+      url: >
+        https://i.vimeocdn.com/favicon/main-touch_180
+      width: 180
+      height: 180
+      size: 32400
+      mime: null
+    - 
+      url: >
+        https://f.vimeocdn.com/images_v6/favicon.ico?22b42b7be9209c3c555312a90afe4fccb716308a
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+    - 
+      url: >
+        https://i.vimeocdn.com/favicon/main-touch_144
+      width: 144
+      height: 144
+      size: 20736
+      mime: null
+  providerName: Vimeo
+  providerUrl: https://vimeo.com/
+  publishedTime: null
+  license: null

@@ -1,0 +1,71 @@
+title: Website
+
+tabs:
+  archive:
+    label: Archive
+    icon: folder
+    columns:
+      - width: 1/1
+        sections:
+          archiveA:
+            type: fields
+            fields:
+              tags:
+                type: structure
+                label: Filters
+                columns:
+                  tags:
+                    width: 1/1
+                fields:
+                  tags:
+                    type: tags
+                    label: Tags
+                    max: 1
+                  color:
+                    type: color
+                    editableAlpha: true
+                    default: "#EFCB69"
+                    presets: 
+                      - "olive"
+                      - "orangered"
+                      - "azure"
+                      - "violet"
+                      - "red"
+                      - "pink"
+                      - "blue"
+                      - "yellow"
+
+              lineA:
+                type: line
+      - width: 2/3
+        sections:
+          archiveB:
+            type: pages
+            headline: List of projects
+            templates:
+              - project
+     - width: 1/3
+        sections:
+          archiveC:
+            type: fields
+            fields:
+              archiveCFields:
+                label: Next project images
+                type: files
+                width: 1/2
+
+  about:
+    label: About
+    icon: image
+  # tracking:
+  #   label: Tracking
+  #   icon: folder
+  #   columns:
+  #     - width: 3/4
+  #       sections:
+  #         main:
+  #           type: matomo-main
+  #     - width: 1/4
+  #       sections:
+  #         sidebar:
+  #           type: matomo-sidebar

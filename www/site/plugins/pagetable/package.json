@@ -1,0 +1,32 @@
+{
+  "name": "kirby-pagetable",
+  "version": "1.0.1",
+  "description": "Display subpages in a flexible table",
+  "main": "index.js",
+  "author": "Sylvain Julé",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel watch src/index.js --no-source-maps -d ./",
+    "build": "parcel build src/index.js --no-source-maps --experimental-scope-hoisting -d ./"
+  },
+  "posthtml": {
+    "recognizeSelfClosing": true
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
+  ],
+  "dependencies": {
+    "tbl-for-kirby": "github:distantnative/tbl-for-kirby",
+    "vue": "^2.6.12",
+    "vue-good-table": "^2.21.1",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "sass": "^1.23.3",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

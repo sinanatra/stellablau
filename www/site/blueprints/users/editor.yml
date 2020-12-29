@@ -1,0 +1,5 @@
+title: Editor
+description: The editor can modify all the content.
+
+permissions:
+  users: false
