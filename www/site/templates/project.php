@@ -4,8 +4,10 @@
 <section class="project__content">
 
     <?php if ($page->text()) : ?>
-        <section class="project__content-text">
-            <div><?= $page->text() ?><div>
+        <section class="project__content-text" id="scrolling">
+        </section>
+        <section class="project__content-fulltext">
+            <div><?= $page->text()->kt() ?></div>
         </section>
     <?php endif; ?>
 

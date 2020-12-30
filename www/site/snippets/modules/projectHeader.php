@@ -1,9 +1,17 @@
 <nav class="project__head">
-    <span>toggle</span>
-    <span>
-        <a href="<?= $site->url() ?>"><h1 class="project__head-title"> <?= $page->title() ?></h1></a>
+    <span class="project__head-toggle">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+            <span class="label">Text</span>
+        </label>
     </span>
-    <span>
-        <a class="project__head-next" href="<?= $site->children()->listed()->shuffle()->first()->url() ?>"> Next Project </a>
+    <span class="project__head-title">
+        <a href="<?= $site->url() ?>">
+            <h1> <?= $page->title() ?></h1>
+        </a>
+    </span>
+    <span class="project__head-next">
+        <a href="<?= $site->children()->listed()->shuffle()->first()->url() ?>"> <img src="<?= $site->files()->shuffle()->first()->url() ?>" /></a>
     </span>
 </nav>

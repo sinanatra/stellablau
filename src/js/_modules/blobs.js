@@ -7,14 +7,13 @@ projects._groups[0].forEach(element => {
 });
 
 const data = d3.csvParse(csvData);
-console.log(data);
 
 const Blobs = {
     init: () => {
 
         let width = window.innerWidth,
             height = window.innerHeight,
-            radius = window.innerWidth / 10;
+            radius = window.innerWidth / 20;
 
         let m = 0,
             clusters = new Array(m);
@@ -50,7 +49,6 @@ const Blobs = {
 
         (async () => {
             let datum = await data;
-            console.log(datum)
             blobs(datum)
         })();
 
@@ -102,11 +100,12 @@ const Blobs = {
 
             const simulation = d3.forceSimulation(nodes)
                 .velocityDecay(0.1)
-                .force("x", d3.forceX(d => d.r).strength(.01))
-                .force("y", d3.forceY(d => d.r).strength(.01))
+                .force("x", d3.forceX(d => d.r).strength(.001))
+                .force("y", d3.forceY(d => d.r).strength(.001))
                 .force("cluster", clustering)
                 .on("tick", ticked)
-                .force("collide", d3.forceCollide().radius(radius - 20 ).iterations(5))
+                .force("collide", d3.forceCollide().radius(radius - (radius / 4)).iterations(5))
+                .force("center", d3.forceCenter());
 
             function ticked() {
                 circles
@@ -165,7 +164,7 @@ const Blobs = {
 
     }
 
-    
+
 };
 
 export default Blobs;

@@ -15,17 +15,17 @@ const vimeo = {
 
             player.play();
 
-            player.getChapters().then(function (chapters) {
-                chapters.forEach((element) => {
-                    $(".chapters").append(
-                        '<div class="chapter" value=' + element.startTime + ">" + element.title + "</div>"
-                    );
-                    $(".chapter").click(function () {
-                        var value = parseInt($(this).attr("value")) + 1;
-                        player.setCurrentTime(value);
-                    });
-                });
-            });
+            // player.getChapters().then(function (chapters) {
+            //     chapters.forEach((element) => {
+            //         $(".chapters").append(
+            //             '<div class="chapter" value=' + element.startTime + ">" + element.title + "</div>"
+            //         );
+            //         $(".chapter").click(function () {
+            //             var value = parseInt($(this).attr("value")) + 1;
+            //             player.setCurrentTime(value);
+            //         });
+            //     });
+            // });
 
             player.on("chapterchange", function (chapter) {
                 $(".chapter").removeClass("active-chapter");
@@ -66,6 +66,12 @@ const vimeo = {
                 $(".js-play").show();
                 $(".js-pause").hide();
             });
+            
+            $('.switch input').change(function () {
+                if ($(this).is(':checked') == true) {
+                    player.pause();
+                }
+            })
 
             $(".js-mute").click(function () {
                 player.setMuted(true);

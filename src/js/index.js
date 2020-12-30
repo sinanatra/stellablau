@@ -12,13 +12,17 @@ import Website from './_modules/website';
 import Home from './_modules/home';
 import Blobs from './_modules/blobs';
 import Video from './_modules/video';
+import Scrolling from './_modules/scrolling';
+import Texts from './_modules/text';
 
 $(document).ready(function () {
   Website.init();
   Home.init();
   Blobs.init();
   Video.init();
+  Scrolling.init();
+  Texts.init();
 });
 
 window.addEventListener('resize', () => { Blobs.init(); }, true)
-
+window.addEventListener('resize', () => { Scrolling.init(); }, true)
