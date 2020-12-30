@@ -10,7 +10,8 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
+  
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon"/>
   <link rel="apple-touch-icon-precomposed" rel="apple-touch-icon" sizes="57x57" href="<?php snippet('modules/favicon', ['size' => 57]); ?>" />
   <link rel="apple-touch-icon-precomposed" rel="apple-touch-icon" sizes="114x114" href="<?php snippet('modules/favicon', ['size' => 114]); ?>" />
   <link rel="apple-touch-icon-precomposed" rel="apple-touch-icon" sizes="72x72" href="<?php snippet('modules/favicon', ['size' => 72]); ?>" />

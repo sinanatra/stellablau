@@ -57,6 +57,16 @@ tabs:
   about:
     label: About
     icon: image
+    columns:
+      - width: 1/1
+        sections:
+          aboutA:
+            type: fields
+            fields:
+              aboutB:
+                label: Text
+                type: markdown
+                width: 1/2
   # tracking:
   #   label: Tracking
   #   icon: folder

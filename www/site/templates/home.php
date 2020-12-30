@@ -22,5 +22,13 @@
     <?php endforeach; ?>
 </div>
 <div class="svgContainer"></div>
+<div class="impressum">
+    <button>Impressum</button>
+</div>
+<div class="impressum-text">
+    <?= $site->aboutB()->text() ?>
+</div>
+
+
 
 <?php snippet('foot') ?>

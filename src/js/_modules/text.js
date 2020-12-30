@@ -7,7 +7,7 @@ const Text = {
             $('.project__content-text').toggle()
             $('.project__content-fulltext').toggle()
             $('.project__content-img').toggle()
-            $('.circle').toggle()
+            $('.circle').css('display','none')
 
 
             if ($(this).is(':checked') == true) {
@@ -53,6 +53,8 @@ const Text = {
                 }
 
                 $(window).scroll(function () {
+                    $('.circle').css('display','block')
+
                     for (let item of paragraphs) {
                         if (isElementInViewport(item) == true) {
 
