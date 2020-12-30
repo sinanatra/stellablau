@@ -13,7 +13,7 @@ const Blobs = {
 
         let width = window.innerWidth,
             height = window.innerHeight,
-            radius = window.innerWidth / 20;
+            radius = window.innerWidth / 10;
 
         let m = 0,
             clusters = new Array(m);
@@ -32,7 +32,7 @@ const Blobs = {
 
         filter.append("feGaussianBlur")
             .attr("in", "SourceGraphic")
-            .attr("stdDeviation", "10")
+            .attr("stdDeviation", "40")
             .attr("color-interpolation-filters", "sRGB")
             .attr("result", "blur");
         filter.append("feColorMatrix")
@@ -99,13 +99,12 @@ const Blobs = {
 
 
             const simulation = d3.forceSimulation(nodes)
-                .velocityDecay(0.1)
-                .force("x", d3.forceX(d => d.r).strength(.001))
-                .force("y", d3.forceY(d => d.r).strength(.001))
+                .velocityDecay(0.2)
+                .force("x", d3.forceX().strength(.001))
+                .force("y", d3.forceY().strength(.001))
                 .force("cluster", clustering)
                 .on("tick", ticked)
-                .force("collide", d3.forceCollide().radius(radius - (radius / 4)).iterations(5))
-                .force("center", d3.forceCenter());
+                .force("collide", d3.forceCollide().radius(radius - (radius / 4)).iterations(2))
 
             function ticked() {
                 circles

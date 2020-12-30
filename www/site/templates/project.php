@@ -11,6 +11,19 @@
         </section>
     <?php endif; ?>
 
+    <?php if ($page->mainImage()->isNotEmpty()) : ?>
+        <section class="project__content-img">
+            <?= $page->mainImage()->toFile() ?>
+        </section>
+    <?php endif; ?>
+
+    <?php if ($page->text()->isNotEmpty()) : ?>
+        <section class="project__content-fulltext">
+            <div><?= $page->text()->kt() ?></div>
+        </section>
+        <div class="circle"></div>
+    <?php endif; ?>
+
     <?php if ($page->vimeolink()->isNotEmpty()) : ?>
         <div class="project__content-video">
             <div class="chapters"></div>

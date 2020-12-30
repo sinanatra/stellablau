@@ -36,7 +36,9 @@ Vimeolink:
 
 ----
 
-Mainimage: 
+Mainimage:
+
+- cat.jpg
 
 ----
 

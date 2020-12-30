@@ -1,12 +1,13 @@
 const Text = {
     init: () => {
-        console.log('Loaded');
         let text = $('.project__content-text');
 
         $('.switch input').change(function () {
             $('.project__content-video').toggle()
             $('.project__content-text').toggle()
             $('.project__content-fulltext').toggle()
+            $('.project__content-img').toggle()
+            $('.circle').toggle()
 
 
             if ($(this).is(':checked') == true) {
@@ -34,16 +35,16 @@ const Text = {
 
                     if (randomValue == 0) {
                         $(item).css('margin-left', '0vw')
-                        $(item).css('width', [60, 40, 20].random() + '%')
+                        $(item).css('width', [80, 60, 40, 20].random() + '%')
 
                     }
                     if (randomValue == 1) {
                         $(item).css('margin-left', '20vw')
-                        $(item).css('width', [40, 20].random() + '%')
+                        $(item).css('width', [60, 40, 20].random() + '%')
                     }
                     if (randomValue == 2) {
                         $(item).css('margin-left', '40vw')
-                        $(item).css('width', [40].random() + '%')
+                        $(item).css('width', [40, 20].random() + '%')
                     }
                     if (randomValue == 3) {
                         $(item).css('margin-left', '60vw')
@@ -51,6 +52,23 @@ const Text = {
                     }
                 }
 
+                $(window).scroll(function () {
+                    for (let item of paragraphs) {
+                        if (isElementInViewport(item) == true) {
+
+
+                            let top = item.getBoundingClientRect().top
+                            let right = item.getBoundingClientRect().right
+                            let left = item.getBoundingClientRect().left
+                            let bottom = item.getBoundingClientRect().bottom
+
+                            $('.circle').css('margin-left', left )
+
+                        }
+                        else{
+                        }
+                    };
+                });
             }
 
             else {
@@ -65,4 +83,12 @@ export default Text;
 
 Array.prototype.random = function () {
     return this[Math.floor((Math.random() * this.length))];
+}
+
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return rect.bottom > 0 &&
+        rect.right > 0 &&
+        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.top < ((window.innerHeight / 5) || document.documentElement.clientHeight);
 }

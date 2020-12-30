@@ -48,8 +48,8 @@ tabs:
                 type: files
                 width: 1/2
                 max: 1
-              mainAudio:
-                label: Audio file
-                type: files
-                width: 1/2
-                max: 1
+              # mainAudio:
+              #   label: Audio file
+              #   type: files
+              #   width: 1/2
+              #   max: 1
