@@ -4,6 +4,9 @@ status:
   draft:
     label: Unpublished
     text: Page is not published and doesn't appear on the website.
+  unlisted:
+    label: Unlisted
+    text: Page is unlisted.
   listed:
     label: Published
     text: Page is published.

@@ -11,8 +11,8 @@ const data = d3.csvParse(csvData);
 const Blobs = {
     init: () => {
 
-        let width = window.innerWidth,
-            height = window.innerHeight,
+        let width = window.innerWidth - 1, 
+            height = window.innerHeight - 1,
             radius = window.innerWidth / 10;
 
         let m = 0,
@@ -32,7 +32,7 @@ const Blobs = {
 
         filter.append("feGaussianBlur")
             .attr("in", "SourceGraphic")
-            .attr("stdDeviation", "40")
+            .attr("stdDeviation", "30")
             .attr("color-interpolation-filters", "sRGB")
             .attr("result", "blur");
         filter.append("feColorMatrix")

@@ -23,7 +23,7 @@
 </div>
 <div class="svgContainer"></div>
 <div class="impressum">
-    <button>Impressum</button>
+    <button>Credits</button>
 </div>
 <div class="impressum-text">
     <?= $site->aboutB()->text() ?>

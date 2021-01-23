@@ -6,7 +6,7 @@ Tags:
 
 - 
   tags: Apokalypse
-  color: '#687290'
+  color: '#AA5EAA'
 - 
   tags: Sackgasse
   color: olive
@@ -15,7 +15,7 @@ Tags:
   color: pink
 - 
   tags: Geraune oder die Propheten Seher
-  color: orangered
+  color: violet
 - 
   tags: oh happy times
   color: azure
@@ -38,19 +38,12 @@ Archivecfields:
 Aboutb:
 
 Erano adunque in Messina tre giovani fratelli e mercatanti,
-
 e assai ricchi uomini rimasi dopo la morte del padre loro,
-
 il quale fu da San Gimignano; 
-
 e avevano una loro sorella chiamata Elisabetta, 
-
 giovane assai bella e costumata, la quale, 
-
 che che se ne fosse cagione, ancora maritata non aveano.
-
 E avevano oltre a ciò questi tre fratelli in un lor fondaco un giovinetto pisano chiamato Lorenzo, che tutti i lor fatti guidava e faceva; il quale, essendo assai bello della persona e leggiadro molto, avendolo più volte Lisabetta guatato, avvenne che egli le incominciò stranamente piacere.
-
 Di che Lorenzo accortosi e una volta e altra, similmente, lasciati suoi altri innamoramenti di fuori, incominciò a porre l’animo a lei; e sì andò la bisogna che, piacendo l’uno all’altro igualmente, non passò gran tempo che, assicuratisi, fecero di quello che più disiderava ciascuno.
 
 E in questo continuando e avendo insieme assai di buon tempo e di piacere, non seppero sì segretamente fare, che una notte, andando Lisabetta 
