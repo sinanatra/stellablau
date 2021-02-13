@@ -11,9 +11,16 @@ const data = d3.csvParse(csvData);
 const Blobs = {
     init: () => {
 
-        let width = window.innerWidth - 1, 
-            height = window.innerHeight - 1,
+        let width = window.innerWidth - 1,
+            height = window.innerHeight - 1;
+
+        let radius;
+
+        if (window.innerWidth <= 750) {
+            radius = window.innerWidth / 3;
+        } else {
             radius = window.innerWidth / 10;
+        }
 
         let m = 0,
             clusters = new Array(m);
