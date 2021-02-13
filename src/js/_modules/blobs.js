@@ -17,7 +17,7 @@ const Blobs = {
         let radius;
 
         if (window.innerWidth <= 750) {
-            radius = window.innerWidth / 3;
+            radius = window.innerWidth / 5;
         } else {
             radius = window.innerWidth / 10;
         }
