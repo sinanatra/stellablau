@@ -11,12 +11,13 @@ const Text = {
             $('.project__content-text').toggle()
             $('.project__content-fulltext').toggle()
             $('.project__content-img').toggle()
-            $('.circle').toggle()
+            $('.circle').hide()
 
 
             if ($(this).is(':checked') == true) {
                 $('.project__head').css('position', 'fixed')
-
+                $('.circle').show()
+                
                 let paragraphs = $('.project__content-fulltext > div').children()
 
                 let marginleft;
@@ -80,7 +81,7 @@ const Text = {
                 }
 
                 $(window).scroll(function () {
-                    // $('.circle').css('display', 'block')
+                    $('.circle').css('top','120px')
 
                     for (let item of paragraphs) {
 
