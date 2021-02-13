@@ -3,8 +3,6 @@ const d3 = require('d3');
 const Scrolling = {
     init: () => {
         try {
-
-
             let rectangle = document.getElementById("scrolling")
             let text = document.getElementsByClassName("project__content-fulltext")[0].children[0].innerText
 

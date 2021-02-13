@@ -23,12 +23,15 @@
 </div>
 <div class="svgContainer"></div>
 <div class="impressum">
-    <button>Credits</button>
+    <button>CREDITS</button>
 </div>
 <div class="impressum-text">
-    <?= $site->aboutB()->text() ?>
 </div>
-
+<div class="impressum-text-content">
+    <div>
+        <div> <?= $site->aboutB()->text()->kt() ?></div>
+    </div>
+</div>
 
 
 <?php snippet('foot') ?>

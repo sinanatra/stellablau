@@ -4,8 +4,9 @@ const Home = {
 
     $(".impressum").click(function () {
       $(".impressum-text").toggle();
+      $(".impressum-text-content").toggle();
       $("foreignObject").toggle();
-  });
+    });
   }
 };
 

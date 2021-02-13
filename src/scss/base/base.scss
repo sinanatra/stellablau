@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: $font-family-sans;
+    background-color: white;
 }
 
 span,
@@ -27,8 +28,10 @@ h1 {
     right: 50px;
     border: 1px solid black;
     padding: $gutter / 4;
-    border-radius: 50%;
+    border-radius: 30px;
     cursor: pointer;
+    z-index: 100000;
+
 
     button {
         background: none;
@@ -46,15 +49,39 @@ h1 {
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 60%;
+    width: 100%;
     min-width: 300px;
-    font-size: 45px;
+    font-size: 56px;
     height: 99vh;
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    // background-color: blue;
-    // mix-blend-mode: darken;
+    background-color: #2F1EF2;
+    mix-blend-mode: color;
+
+}
+.impressum-text-content {
+    display: none;
+    position: absolute;
+    padding: $gutter;
+    min-width: 300px;
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    width: 60%;
+    color: black;
+    height: 99vh;
+    overflow: hidden;
+
+
+    &>div{
+        position: absolute;
+        overflow: scroll;
+
+        &>div{
+            height: 100%;
+        }
+    }
 }
 
 ::-webkit-scrollbar {
