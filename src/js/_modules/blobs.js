@@ -115,7 +115,7 @@ const Blobs = {
                     .attr('y', function (d) { return d.y; });
             }
 
-            setInterval(function () { simulation.alphaTarget(1); }, 500);
+            // setInterval(function () { simulation.alphaTarget(1); }, 500);
 
 
             function drag() {
