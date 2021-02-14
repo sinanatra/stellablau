@@ -1,6 +1,7 @@
 const d3 = require('d3');
 const projects = d3.selectAll('.data-category');
 let csvData = 'text,category,cluster,url,color\n'
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 projects._groups[0].forEach(element => {
     csvData += element.innerHTML + ',' + element.dataset.link + ',' + element.dataset.cluster + ',' + element.dataset.url + ',' + element.dataset.color + '\n'
@@ -77,8 +78,11 @@ const Blobs = {
                 return d;
             });
 
-            const circleWrapper = svg.append("g")
-                .style("filter", "url(#gooe)");
+            const circleWrapper = svg.append("g");
+
+            if (!isSafari) {
+                circleWrapper.style("filter", "url(#gooe)");
+            }
 
             const circles = circleWrapper.append('g')
                 .datum(nodes)
@@ -110,8 +114,13 @@ const Blobs = {
                 .force("x", d3.forceX().strength(.001))
                 .force("y", d3.forceY().strength(.001))
                 .force("cluster", clustering)
-                .on("tick", ticked)
-                .force("collide", d3.forceCollide().radius(radius - (radius / 4)).iterations(2))
+                .on("tick", ticked);
+
+            if (!isSafari) {
+                simulation.force("collide", d3.forceCollide().radius(radius - (radius / 4)).iterations(2))
+            } else {
+                simulation.force("collide", d3.forceCollide().radius(radius + 1).iterations(2))
+            }
 
             function ticked() {
                 circles
