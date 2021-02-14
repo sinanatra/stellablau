@@ -3,7 +3,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: $font-family-sans;
-    background-color: white;
+    // background-color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 span,
@@ -20,6 +22,7 @@ h1 {
 
 .svgContainer a {
     user-select: none;
+    font-size: 1.2rem;
 }
 
 .impressum {
@@ -45,7 +48,7 @@ h1 {
 
 .impressum-text {
     display: none;
-    position: absolute;
+    position: fixed;
     padding: $gutter;
     top: 0;
     left: 0;
@@ -63,7 +66,7 @@ h1 {
 }
 .impressum-text-content {
     display: none;
-    position: absolute;
+    position: fixed;
     padding: $gutter;
     min-width: 300px;
     font-size: 24px;
@@ -79,6 +82,7 @@ h1 {
     &>div{
         position: absolute;
         overflow: scroll;
+        padding-bottom: 5rem;
 
         &>div{
             height: 100%;
