@@ -249,7 +249,7 @@ input:checked ~ * ~ .label {
         flex-wrap: wrap;
         font-family: $font-family-serif;
         font-size: $font-size-lg;
-        word-break:normal;
+        word-break:break-word;
         hyphens: auto;
 
         * {
