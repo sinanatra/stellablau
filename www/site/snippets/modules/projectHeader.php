@@ -20,9 +20,7 @@
             <a href="<?= $site->url() ?>"></a>
         </span>
     <?php endif; ?>
-
-
     <span class="project__head-next">
-        <a href="<?= $site->children()->listed()->shuffle()->first()->url() ?>"> <img src="<?= $site->files()->shuffle()->first()->url() ?>" /></a>
+        <a href="<?= $site->children()->filterBy('status', 'in', ['unlisted', 'listed'])->not('error', 'home')->shuffle()->first()->url() ?>"> <img src="<?= $site->files()->shuffle()->first()->url() ?>" /></a>
     </span>
 </nav>
