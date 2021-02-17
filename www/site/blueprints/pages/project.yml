@@ -27,11 +27,15 @@ tabs:
                 max: 1
                 options: query
                 query: site.tags.toStructure.pluck("tags", ",", true)
-                width: 1/2
+                width: 1/4
+              textImages:
+                label: Images
+                type: files
+                width: 1/4
               text:
                 label: Text
                 type: markdown
-                width: 1/2
+                width: 2/4
   material:
     label: Materials
     icon: layers
