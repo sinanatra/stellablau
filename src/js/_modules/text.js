@@ -19,7 +19,7 @@ const Text = {
                 $('.circle').show()
                 
                 let paragraphs = $('.project__content-fulltext > div').children()
-
+                console.log(paragraphs)
                 let marginleft;
 
                 if (window.innerWidth <= 650) {

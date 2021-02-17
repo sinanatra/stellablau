@@ -2,6 +2,8 @@ const d3 = require('d3');
 const projects = d3.selectAll('.data-category');
 let csvData = 'text,category,cluster,url,color\n'
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+const isFirefox = /^((?!chrome|android).)*firefox/i.test(navigator.userAgent);
+console.log(isFirefox, navigator.userAgent)
 
 projects._groups[0].forEach(element => {
     csvData += element.innerHTML + ',' + element.dataset.link + ',' + element.dataset.cluster + ',' + element.dataset.url + ',' + element.dataset.color + '\n'
@@ -80,7 +82,7 @@ const Blobs = {
 
             const circleWrapper = svg.append("g");
 
-            if (!isSafari) {
+            if (isFirefox == false && isSafari == false) {
                 circleWrapper.style("filter", "url(#gooe)");
             }
 
@@ -92,7 +94,14 @@ const Blobs = {
                 .attr("xlink:href", d => d.url)
                 .append('circle')
                 .attr('r', (d) => d.r)
-                .attr('fill', (d) => d.color)
+                .attr('fill',
+                    function (d) {
+                        if (isSafari == false && isFirefox == false) {
+                            return d.color
+                        } else {
+                            return 'white'
+                        }
+                    })
                 .call(drag())
 
             const texts = svg.append('g')
@@ -100,6 +109,14 @@ const Blobs = {
                 .selectAll('text')
                 .data(nodes)
                 .enter().append('a')
+                .attr('color',
+                    function (d) {
+                        if (isSafari == false && isFirefox == false) {
+                            return 'black'
+                        } else {
+                            return d.color
+                        }
+                    })
                 .attr("xlink:href", d => d.url)
                 .append('foreignObject')
                 .attr("class", "text-inner")
@@ -108,19 +125,13 @@ const Blobs = {
                 .html(d => d.major)
                 .call(drag());
 
-
             const simulation = d3.forceSimulation(nodes)
                 .velocityDecay(0.2)
                 .force("x", d3.forceX().strength(.001))
                 .force("y", d3.forceY().strength(.001))
                 .force("cluster", clustering)
                 .on("tick", ticked);
-
-            if (!isSafari) {
-                simulation.force("collide", d3.forceCollide().radius(radius - (radius / 4)).iterations(2))
-            } else {
-                simulation.force("collide", d3.forceCollide().radius(radius + 1).iterations(2))
-            }
+            simulation.force("collide", d3.forceCollide().radius(radius - (radius / 4)).iterations(2))
 
             function ticked() {
                 circles
