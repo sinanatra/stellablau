@@ -1,5 +1,4 @@
 <nav class="project__head">
-    <?php if ($page->text()->isNotEmpty()) : ?>
         <span class="project__head-toggle">
             <label class="switch">
                 <input type="checkbox">
@@ -7,7 +6,6 @@
                 <span class="label">Text</span>
             </label>
         </span>
-    <?php endif; ?>
     <?php if ($page->isListed()) : ?>
         <span class="project__head-title">
             <a href="<?= $site->url() ?>">

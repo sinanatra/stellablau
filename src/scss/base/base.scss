@@ -90,6 +90,13 @@ h1 {
     }
 }
 
+.impressum-text-content a {
+    color: black;
+    text-decoration: underline;
+    vertical-align: super;
+    font-size: .875rem;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

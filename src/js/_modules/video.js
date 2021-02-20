@@ -1,5 +1,21 @@
 import Player from "@vimeo/player";
 
+function format(time) {
+    // Hours, minutes and seconds
+    var hrs = ~~(time / 3600);
+    var mins = ~~((time % 3600) / 60);
+    var secs = ~~time % 60;
+
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    var ret = "";
+    if (hrs > 0) {
+        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+    }
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+    return ret;
+}
+
 const vimeo = {
     init: () => {
         try {
@@ -14,18 +30,6 @@ const vimeo = {
             const player = new Player(iframe, options);
 
             player.play();
-
-            // player.getChapters().then(function (chapters) {
-            //     chapters.forEach((element) => {
-            //         $(".chapters").append(
-            //             '<div class="chapter" value=' + element.startTime + ">" + element.title + "</div>"
-            //         );
-            //         $(".chapter").click(function () {
-            //             var value = parseInt($(this).attr("value")) + 1;
-            //             player.setCurrentTime(value);
-            //         });
-            //     });
-            // });
 
             player.on("chapterchange", function (chapter) {
                 $(".chapter").removeClass("active-chapter");
@@ -96,18 +100,4 @@ const vimeo = {
 
 export default vimeo;
 
-function format(time) {
-    // Hours, minutes and seconds
-    var hrs = ~~(time / 3600);
-    var mins = ~~((time % 3600) / 60);
-    var secs = ~~time % 60;
 
-    // Output like "1:01" or "4:03:59" or "123:03:59"
-    var ret = "";
-    if (hrs > 0) {
-        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-    }
-    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
-    ret += "" + secs;
-    return ret;
-}

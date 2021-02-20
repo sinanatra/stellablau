@@ -17,19 +17,20 @@
 
     .project__head-toggle {
         flex: 1;
-        max-width: 90px;
+        max-width: 80px;
         min-width: 110px;
     }
 
     .project__head-next {
         flex: 1;
-        max-width: 90px;
+        max-width: 80px;
         background-color: $color-highlight;
 
         img {
-            width: 90px;
+            width: 80px;
             height: 40px;
-            object-fit: cover;
+            object-fit: contain;
+            margin-top: -3px;
         }
     }
 
@@ -40,6 +41,7 @@
         font-size: 1rem;
         overflow:hidden; 
         min-width: 0;
+        padding-top: 10px;
  
         h1{
             text-overflow: ellipsis;
@@ -83,7 +85,7 @@ iframe {
 
         .project__timer {
             position: absolute;
-            right: 120px;
+            right: 60px;
             text-align: right;
         }
 
@@ -160,11 +162,11 @@ iframe {
 .switch {
     position: relative;
     display: inline-block;
-    width: 85px;
+    width: 80px;
     height: 30px;
     margin-top: 2px;
-    margin-left: $gutter;
-    border: 1px solid black;
+    margin-left: -2px;
+    border: 1px solid #000;
     border-radius: 20px;
 }
 
@@ -206,30 +208,46 @@ input:checked + .slider {
     }
 }
 
+input:disabled+.slider {
+    background: transparent;
+}
+
+input:disabled ~ * ~ .label{
+    color: black;
+}
+
+input:disabled + .slider::before {
+    background-color: black;
+}
+
 input:focus + .slider {
     box-shadow: 0 0 1px black;
 }
 
 .label {
     z-index: 10;
-    color: white;
+    color: #fff;
     position: absolute;
-    margin-left: -10px;
-    -webkit-transition: 0.4s;
+    margin-left: -8px;
+    -webkit-transition: .4s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     cursor: pointer;
+    margin-top: -1px;
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(55px);
-    -ms-transform: translateX(55px);
-    transform: translateX(55px);
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
 }
 
 input:checked ~ * ~ .label {
-    -webkit-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    transform: translateX(-20px);
+    -webkit-transform: translateX(-21px);
+    -ms-transform: translateX(-21px);
+    transform: translateX(-21px);
     color: black;
 }
 
@@ -242,8 +260,7 @@ input:checked ~ * ~ .label {
 }
 
 .project__content-fulltext {
-    padding: $gutter;
-    padding-top: 100px;
+    padding: 100px 16px 550px 16px;
 
     div {
         flex-wrap: wrap;
@@ -251,6 +268,11 @@ input:checked ~ * ~ .label {
         font-size: $font-size-lg;
         word-break:break-word;
         hyphens: auto;
+
+        @media only screen and (max-width: $tablet) {
+            font-size: 1.5rem;
+        }
+
 
         * {
             width: 20vw;
@@ -263,6 +285,7 @@ input:checked ~ * ~ .label {
         padding: 0 !important;
         display: inline;
         cursor: help;
+        // cursor: url('../questionmark.png'), auto;	
 
         img {
             margin: 0 !important;
@@ -282,3 +305,4 @@ input:checked ~ * ~ .label {
     left: 50%;
     transform: translateX(-50%);
 }
+

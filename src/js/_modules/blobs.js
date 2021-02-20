@@ -14,13 +14,13 @@ const data = d3.csvParse(csvData);
 const Blobs = {
     init: () => {
 
-        let width = window.innerWidth - 1,
-            height = window.innerHeight - 1;
+        let width = window.innerWidth,
+            height = window.innerHeight - 2;
 
         let radius;
 
         if (window.innerWidth <= 750) {
-            radius = window.innerWidth / 5;
+            radius = window.innerWidth / 4;
         } else {
             radius = window.innerWidth / 10;
         }

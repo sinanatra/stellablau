@@ -6,6 +6,39 @@ const Text = {
             $(this).toggleClass('biggerImg')
         });
 
+        if ($('.project__content-img').length == 0 && $('.project__content-video').length == 0) {
+            $('.project__content-video').toggle()
+            $('.project__content-text').toggle()
+            $('.project__content-fulltext').toggle()
+            $('.project__content-img').toggle()
+            $('.circle').hide()
+            // $('.switch').hide()
+            $('.switch input').prop("disabled", true);
+            $('.switch input').prop('checked', true);
+            
+            textToggle();
+        }
+
+        if ($('.project__content-text').length == 0) {
+            $('.switch input').prop("disabled", true);
+            $('.switch input').prop('checked', false);
+        }
+
+        $('.switch input').change(function () {
+            $('.project__content-video').toggle()
+            $('.project__content-text').toggle()
+            $('.project__content-fulltext').toggle()
+            $('.project__content-img').toggle()
+            $('.circle').hide()
+
+            if ($(this).is(':checked') == true) {
+                textToggle();
+            }
+            else {
+                $('.project__head').css('position', 'unset')
+            }
+
+        });
         function textToggle() {
             $('.project__head').css('position', 'fixed')
             $('.circle').show()
@@ -92,31 +125,7 @@ const Text = {
         }
 
 
-        if ($('.project__content-img').length == 0 && $('.project__content-video').length == 0) {
-            $('.project__content-video').toggle()
-            $('.project__content-text').toggle()
-            $('.project__content-fulltext').toggle()
-            $('.project__content-img').toggle()
-            $('.circle').hide()
-            $('.switch').hide()
-            textToggle();
-        }
 
-        $('.switch input').change(function () {
-            $('.project__content-video').toggle()
-            $('.project__content-text').toggle()
-            $('.project__content-fulltext').toggle()
-            $('.project__content-img').toggle()
-            $('.circle').hide()
-
-            if ($(this).is(':checked') == true) {
-                textToggle();
-            }
-            else {
-                $('.project__head').css('position', 'unset')
-            }
-
-        });
 
     }
 };
