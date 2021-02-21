@@ -299,8 +299,8 @@ input:checked ~ * ~ .label {
 }
 
 .biggerImg img{
-    min-width: 500px;
-    min-height: 500px;
+    min-width: 60vw;
+    min-height: 60vh;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

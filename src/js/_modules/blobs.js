@@ -3,7 +3,6 @@ const projects = d3.selectAll('.data-category');
 let csvData = 'text,category,cluster,url,color\n'
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 const isFirefox = /^((?!chrome|android).)*firefox/i.test(navigator.userAgent);
-console.log(isFirefox, navigator.userAgent)
 
 projects._groups[0].forEach(element => {
     csvData += element.innerHTML + ',' + element.dataset.link + ',' + element.dataset.cluster + ',' + element.dataset.url + ',' + element.dataset.color + '\n'
@@ -82,7 +81,7 @@ const Blobs = {
 
             const circleWrapper = svg.append("g");
 
-            if (isFirefox == false && isSafari == false) {
+            if (isSafari == false) {
                 circleWrapper.style("filter", "url(#gooe)");
             }
 
