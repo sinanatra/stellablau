@@ -66,6 +66,20 @@ tabs:
               aboutB:
                 label: Text
                 type: markdown
+                width: 1/1
+          seoA:
+            type: fields
+            fields:
+              descriptionSEO:
+                type: markdown
+                label: Description for SEO
+                buttons: false
+                width: 1/2
+              imageSEO:
+                type: files
+                multiple: false
+                label: Image for SEO
+                query: site.index.images
                 width: 1/2
   # tracking:
   #   label: Tracking
